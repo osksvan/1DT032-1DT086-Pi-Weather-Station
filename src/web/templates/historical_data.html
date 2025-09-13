@@ -1,0 +1,17 @@
+<!doctype html>
+<head>
+  <title>Raspberry Pi Weather Station</title>
+    {{ js_resources|indent(4)|safe }}
+    {{ css_resources|indent(4)|safe }}
+    {{ plot_script|indent(4)|safe }}
+</head>
+
+<ul>
+  <li><a href="/live_data">Live data</a></li>
+  <li><a href="/historical_data">Historical data</a></li>
+</ul>
+<h1>Historical sensor data</h1>
+{{ plot_div|indent(4)|safe }}
+<footer>
+    <p style="color:red;">Caution: Data values may be inaccurate.</p>
+</footer>
