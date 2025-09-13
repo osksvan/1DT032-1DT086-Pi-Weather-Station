@@ -12,7 +12,7 @@ import random
 import os
 import json
 
-LOG_FILE = LOG_FILE
+LOG_FILE = "/tmp/weatherdata.json"
 
 app = Flask(__name__)
 
