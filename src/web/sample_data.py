@@ -5,7 +5,7 @@ import json
 import os
 import time
 
-LOG_FILE = LOG_FILE
+LOG_FILE = "/tmp/weatherdata.json"
 THERMAL_PROBE = "/sys/class/thermal/thermal_zone0/temp" 
 
 while True:

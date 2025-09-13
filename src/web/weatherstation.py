@@ -43,9 +43,14 @@ def historical_data():
 
 def get_data():
     # Read data from LOG_FILE, return data as separate lists
-    if os.path.getsize(LOG_FILE) > 0:
-        with open(LOG_FILE, 'r') as file:
-            dataset = json.load(file)
+    while True:
+    try:
+        if os.path.getsize(LOG_FILE) > 0:
+            with open(LOG_FILE, 'r') as file:
+                dataset = json.load(file)
+            break
+    except:
+        print("Failed to read data")
     timestamps = []
     temperatures = []
 
