@@ -1,53 +1,22 @@
-<!doctype html>
-<head>
-  <title>Raspberry Pi Weather Station</title>
+{% extends "base.html" %}
+{% block title %}Raspberry Pi Weather Station{% endblock %}
+{% block head %}
+    {{ super() }}
     {{ js_resources|indent(4)|safe }}
     {{ css_resources|indent(4)|safe }}
-    {{ plot_script|indent(4)|safe }}
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+    {% for plot_script in plot_scripts %}
+      {{ plot_script|indent(4)|safe }}
+    {% endfor %}
+{% endblock %}
 
-    h2, p {
-      margin: 10px;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333333;
-    }
-
-    ul li {
-      float: left;
-    }
-
-    ul li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    ul li a:hover {
-      background-color: #111111;
-    }
-  </style>
-</head>
-
-
-<ul>
-  <li><a href="/live_data">Live data</a></li>
-  <li><a href="/historical_data">Historical data</a></li>
-</ul>
+{% block content %}
+{{ super() }}
 <h1>Historical sensor data</h1>
-{{ plot_div|indent(4)|safe }}
-<footer>
-    <p style="color:red;">Caution: Data values may be inaccurate.</p>
-    <p>Created for a project in course 1DT032/1DT086 at Uppsala University</p>
-</footer>
+<form action="{{ url_for("historical_data")}}" method="post">
+<label for="last_num_days">Number of days:</label>
+<input type="text" id="last_num_days" name="last_num_days" value="{{last_num_days}}">
+<button type="submit">Update</button>
+{% for plot_div in plot_divs %}
+  {{ plot_div|indent(4)|safe }}
+{% endfor %}
+{% endblock %}

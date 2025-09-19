@@ -1,50 +1,16 @@
-<!doctype html>
-<head>
-  {# Autorefresh page every second #}
-  <meta http-equiv="refresh" content="1" />
-  <title>Raspberry Pi Weather Station</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+{% extends "base.html" %}
+{% block title %}Raspberry Pi Weather Station{% endblock %}
+{% block head %}
+    {{ super() }}
+    {# Autorefresh page every second #}
+    <meta http-equiv="refresh" content="5" />
+{% endblock %}
 
-    h2, p {
-      margin: 10px;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333333;
-    }
-
-    ul li {
-      float: left;
-    }
-
-    ul li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    ul li a:hover {
-      background-color: #111111;
-    }
-  </style>
-</head>
-<ul>
-  <li><a href="/live_data">Live data</a></li>
-  <li><a href="/historical_data">Historical data</a></li>
-</ul>
+{% block content %}
+{{ super() }}
 <h1>Live sensor data</h1>
-<p>Temperature is {{ temp }} degrees celsius!</p>
-<footer>
-    <p style="color:red;">Caution: Data values may be inaccurate.</p>
-    <p>Created for a project in course 1DT032/1DT086 at Uppsala University</p>
-</footer>
+{% for measurement, value, unit in values %}
+  <p>{{measurement}} is {{ value }} {{unit}}.</p>
+{% endfor %}
+
+{% endblock %}

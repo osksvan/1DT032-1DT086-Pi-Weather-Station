@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+  {% block head %}
+  <title>{% block title %}{% endblock %}</title>
+  {% endblock %}
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    h2, p {
+      margin: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    ul li {
+      float: left;
+    }
+
+    ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      background-color: #111111;
+    }
+    ul li.active {
+        background-color: green;
+    }
+  </style>
+</head>
+<script type="text/javascript">
+
+updateLinks();
+
+function updateLinks () {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        _updateLinks();
+    }
+
+    function _updateLinks() {
+        var menuLinks = document.querySelectorAll('li.menu');
+
+        menuLinks.forEach(function (link) {
+            if (window.location.pathname === new URL(link.querySelector('a').
+                                                          getAttribute('href'), 
+                                                          window.location.origin).pathname)
+                link.classList.add('active');
+        });
+    }
+};
+</script>
+{% block content %}
+<ul>
+  <li class="menu"><a href="/live_data">Live data</a></li>
+  <li class="menu"><a href="/historical_data">Historical data</a></li>
+</ul>
+{% endblock %}
+<footer>
+    {% block footer %}
+    <p style="color:red;">Caution: Data values may be inaccurate.</p>
+    <p>Created for a project in course 1DT032/1DT086 at Uppsala University</p>
+    {% endblock %}
+</footer>
