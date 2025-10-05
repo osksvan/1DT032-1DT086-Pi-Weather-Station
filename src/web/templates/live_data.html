@@ -33,13 +33,19 @@
   <p>Current readings from the Raspberry Pi Sense HAT. Page auto-refreshes every 5 seconds.</p>
 
   {# Loop over values list from Flask: (measurement_name, current_value, unit) #}
-  <div class="data-list">
-      {% for measurement, value, unit in values %}
-        <div class="data-card">
-          <h3>{{ measurement }}</h3>
-          <p>{{ value }} {{ unit }}</p>
-        </div>
-      {% endfor %}
+  <div class="content-section">
+    <h1>Live sensor data</h1>
+    <p class="description">Current readings from the Raspberry Pi Sense HAT. Page auto-refreshes every 5 seconds.</p>
+
+    {# Loop over values list from Flask: (measurement_name, current_value, unit) #}
+    <div class="data-list">
+        {% for measurement, value, unit in values %}
+          <div class="data-card">
+            <h3>{{ measurement }}</h3>
+            <p>{{ value }} {{ unit }}</p>
+          </div>
+        {% endfor %}
     </div>
+  </div>
 
 {% endblock %}
