@@ -5,8 +5,6 @@
   It extends the base.html layout and includes:
     - A form to select the number of days of data to display (POST to /historical_data).
     - Embedded Bokeh plot divs and scripts for each sensor's line chart.
-    - Inline JS/CSS resources from Bokeh for standalone rendering.
-
   Dependencies: Flask, Bokeh (embedded via components).
 #}
 
@@ -49,9 +47,6 @@
       <input type="text" id="last_num_days" name="last_num_days" value="{{last_num_days}}" min="1" required>
       <button type="submit">Update</button>
     </form>
-
-
-
   </section>
   
   <div class="plots">

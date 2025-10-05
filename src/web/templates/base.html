@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- allows child templates to override/extend the head section -->
   {% block head %}
-  <!-- allows child templates to override/extend the head section, including meta tags, links, and styles. -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +10,21 @@
   <!-- enables child templates to set a custom page title. -->
   <title>{% block title %}Weather Station{% endblock %}</title>
 
-
-  <!-- Google Fonts for better typography -->
+  <!-- Google Fonts for Typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Link to custom stylesheet -->
+  <!-- Link custom stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
   {% endblock %}
 </head>
 
 <body>
-
   <header>
     <h1 class="app-title">🌦 Raspberry Pi Weather Station</h1>
 
     <nav>
-      <!-- Navigation menu providing links to key application sections. -->
+      <!-- Navigation Menu: provides links to application sections. -->
       <ul class="navbar">
         <li class="menu"><a href="/live_data">Live data</a></li>
         <li class="menu"><a href="/historical_data">Historical data</a></li>
@@ -34,7 +32,7 @@
     </nav>
   </header>
 
-  <!-- This block is the primary content area where child templates insert their main page content. -->
+  <!-- Primary content area: where child templates insert their main page content. -->
   <main>
     {% block content %}
     {% endblock %}
@@ -45,7 +43,7 @@
     {% block footer %}
     
     <!-- Warning notice -->
-    <p class="warning">⚠️ Caution: Data values may be inaccurate.</p>
+    <!-- <p class="warning">⚠️ Caution: Data values may be inaccurate.</p> -->
     
     <!-- Attribution -->
     <p>Created for a project in course <strong>1DT032 / 1DT086</strong> at <strong>Uppsala University</strong>.</p>
