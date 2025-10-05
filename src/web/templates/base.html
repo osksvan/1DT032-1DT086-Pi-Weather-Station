@@ -2,26 +2,43 @@
 <html lang="en">
 <head>
   {% block head %}
+  <!-- allows child templates to override/extend the head section, including meta tags, links, and styles. -->
+  
+  <!-- enables child templates to set a custom page title. -->
   <title>{% block title %}{% endblock %}</title>
+  
+  <!-- Links to the  stylesheet for consistent styling across pages. -->
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
   {% endblock %}
 </head>
 
 <body>
   {% block content %}
+  <!-- This block is the primary content area where child templates insert their main page content. -->
+  
+  <!-- Navigation menu providing links to key application sections. -->
   <ul>
+    <!-- Link to the live data view, displaying real-time information. -->
     <li class="menu"><a href="/live_data">Live data</a></li>
+
+    <!-- Link to the historical data view, showing past records. -->
     <li class="menu"><a href="/historical_data">Historical data</a></li>
   </ul>
   {% endblock %}
 
   <footer>
     {% block footer %}
+    
+    <!-- Warning notice -->
     <p class="warning">Caution: Data values may be inaccurate.</p>
+    
+    <!-- Attribution -->
     <p>Created for a project in course 1DT032/1DT086 at Uppsala University</p>
     {% endblock %}
   </footer>
 
+  <!-- link to JavaScript file -->
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
