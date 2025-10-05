@@ -57,7 +57,7 @@ last_num_days = 30
 
 def live_data():
     # The first page you see is just the live data
-    # In the template (live_data.html) this is set to auto refresh every second
+    # In the template (live_data.html) this is set to auto refresh every five-seconds
     """
     Route for the live data page (also the Homepage).
     Extracts the most recent value for each sensor and passes it to the live_data.html template.
