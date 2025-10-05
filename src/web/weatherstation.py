@@ -120,27 +120,53 @@ def historical_data():
         last_num_days=last_num_days,)
 
 def extract(key):
+    """
+    Extracts all values for a given key from the JSON dataset.
+    Handles both top-level keys and nested keys (e.g., under a 'sensors' dict).
+    
+    Args:
+        key (str): The JSON key to extract (e.g., 'temperature_celsius').
+    
+    Returns:
+        list: List of extracted values, in chronological order.
+              Empty list if no data or key not found.
+    """
     
     data = get_json()
+    if not data:
+        return []
+
     extracted = []
-    for q in data:
-        for k,v in q.items():
-            if k == key:
-                extracted.append(v)
-            if type(v) is dict:
-                for kk,vv in v.items():
-                    if kk == key:
-                        extracted.append(vv)
-    return extracted
+    for entry in data:
+        # Check top-level keys
+        if key in entry:
+            extracted.append(entry[key])
+        # Check nested dicts (e.g., entry['sensors'][key])
+        for value in entry.values():
+            if isinstance(value, dict):
+                if key in value:
+                    extracted.append(value[key])
+    return extracted    
 
 def get_json():
+    """
+    Loads the weather data from the JSON log file.
+    
+    Returns:
+        list: The parsed JSON data (list of dicts, each representing a timestamped entry).
+              Empty list if file doesn't exist, is empty, or fails to load.
+    
+    Raises:
+        Prints error message to console on failure (no exception raised for robustness).
+    """
     try:
-        if os.path.getsize(LOG_FILE) > 0:
+        if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0:
             with open(LOG_FILE, 'r') as file:
                 dataset = json.load(file)
-    except:
-        print("Failed to read data")
-    return dataset
+                return dataset
+    except (json.JSONDecodeError, IOError) as e:
+        print(f"Failed to read data from {LOG_FILE}: {e}")
+    return []
 
 if __name__ == "__main__":
     """
@@ -148,11 +174,21 @@ if __name__ == "__main__":
     Loads the data and prints the latest values for each sensor to the console.
     Useful for quick testing without starting the Flask server.
     """
-    try:
-        if os.path.getsize(LOG_FILE) > 0:
-            with open(LOG_FILE, 'r') as file:
-                dataset = json.load(file)
-    except:
-        print("Failed to read data")
-    for (title, unit, data_point) in DATA_ENTRIES:
-        print("{}: {} {}".format(title, extract(data_point), unit))
+    """
+    Entry point when running the script directly (e.g., python weatherstation.py).
+    Loads the data and prints the latest values for each sensor to the console.
+    Useful for quick testing without starting the Flask server.
+    """
+    # Load data for printing
+    dataset = get_json()
+    if dataset:
+        print("Latest sensor readings:")
+        for (title, unit, data_point) in DATA_ENTRIES:
+            values = extract(data_point)
+            if values:
+                latest = values[-1]
+                print(f"{title}: {latest} {unit}")
+            else:
+                print(f"{title}: No data available")
+    else:
+        print("No data loaded. Ensure data.json exists and is valid.")
