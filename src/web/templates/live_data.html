@@ -1,16 +1,40 @@
+{# 
+  Live Data Template for Raspberry Pi Weather Station Project
+
+  This Jinja2 template renders the live data page using data passed from the Flask route.
+  It extends the base.html layout and includes:
+  - An auto-refresh meta tag to update the page every 5 seconds for near-real-time sensor readings.
+  - A simple list of current sensor values (e.g., "Temperature is 22.5 celsius").
+  No Bokeh plots here; focuses on current snapshots from the Sense HAT.
+
+  Dependencies: Flask (for templating via Jinja2).
+#}
+
+
 {% extends "base.html" %}
-{% block title %}Raspberry Pi Weather Station{% endblock %}
+
+{# Set the page title #}
+{% block title %}Raspberry Pi Weather Station - Live Data{% endblock %}
+
+{# Add auto-refresh to the <head> for periodic updates without JavaScript #}
 {% block head %}
-    {{ super() }}
-    {# Autorefresh page every second #}
+    {{ super() }} {# Inherit any head content from base.html, e.g., CSS/JS links #}
+    
+    
+    {# Meta refresh: Reloads the page every 5 seconds to fetch fresh data. #}
     <meta http-equiv="refresh" content="5" />
 {% endblock %}
 
+{# Main content block: Display current sensor readings #}
 {% block content %}
-{{ super() }}
-<h1>Live sensor data</h1>
-{% for measurement, value, unit in values %}
-  <p>{{measurement}} is {{ value }} {{unit}}.</p>
-{% endfor %}
+  {{ super() }} {# Inherit any content from base.html, e.g., navigation #}
+  
+  <h1>Live sensor data</h1>
+  <p>Current readings from the Raspberry Pi Sense HAT. Page auto-refreshes every 5 seconds.</p>
+
+  {# Loop over values list from Flask: (measurement_name, current_value, unit) #}
+  {% for measurement, value, unit in values %}
+     <p><strong>{{ measurement }}</strong> is {{ value }} {{ unit }}.</p>
+  {% endfor %}
 
 {% endblock %}
