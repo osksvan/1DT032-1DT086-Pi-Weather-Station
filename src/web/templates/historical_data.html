@@ -17,7 +17,7 @@
 
 {# Add Bokeh resources and plot scripts to the <head> for proper loading #}
 {% block head %}  
-    {{ super() }} {# Inherit any head content from base.html, e.g., CSS/JS links #}
+    {{ super() }} {# Inherit any head content from base.html
     
     {# Render Bokeh JS resources inline #}
     {{ js_resources|indent(4)|safe }}
@@ -31,22 +31,36 @@
     {% endfor %}
 {% endblock %}
 
+
+
 {# Main content block: Form for day selection and plot displays #}
 {% block content %}
-  
   {{ super() }} {# Inherit any content from base.html, e.g., navigation #}
+  <section class="content-section">
+    <h2>Historical Sensor Data</h2>
+    <p class="description">
+
+      View trends from the Sense HAT sensors over the past {{ last_num_days }} days. Adjust below to update.
+    </p>
+
+    {# Inherit any content from base.html, e.g., navigation #}
+    <form action="{{ url_for("historical_data") }}" method="post" class="days-form">
+      <label for="last_num_days">Number of days:</label>
+      <input type="text" id="last_num_days" name="last_num_days" value="{{last_num_days}}" min="1" required>
+      <button type="submit">Update</button>
+    </form>
+
+
+
+  </section>
   
-  <h1>Historical Sensor Data</h1>
-  <p>View trends from the Sense HAT sensors over the past {{ last_num_days }} days. Adjust below to update.</p>
+  <div class="plots">
+    {# Render each Bokeh plot div (one per sensor, e.g., temperature line chart) #}
+    {% for plot_div in plot_divs %}
+      <div class="plot-container">
+        {{ plot_div|indent(4)|safe }}
+      </div>
+    {% endfor %}
+    </div>
 
-  {# Inherit any content from base.html, e.g., navigation #}
-  <form action="{{ url_for("historical_data")}}" method="post">
-  <label for="last_num_days">Number of days:</label>
-  <input type="text" id="last_num_days" name="last_num_days" value="{{last_num_days}}">
-  <button type="submit">Update</button>
-
-  {# Render each Bokeh plot div (one per sensor, e.g., temperature line chart) #}
-  {% for plot_div in plot_divs %}
-    {{ plot_div|indent(4)|safe }}
-  {% endfor %}
 {% endblock %}

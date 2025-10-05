@@ -27,14 +27,19 @@
 
 {# Main content block: Display current sensor readings #}
 {% block content %}
-  {{ super() }} {# Inherit any content from base.html, e.g., navigation #}
+  {{ super() }} {# Inherit any content from base.html
   
   <h1>Live sensor data</h1>
   <p>Current readings from the Raspberry Pi Sense HAT. Page auto-refreshes every 5 seconds.</p>
 
   {# Loop over values list from Flask: (measurement_name, current_value, unit) #}
-  {% for measurement, value, unit in values %}
-     <p><strong>{{ measurement }}</strong> is {{ value }} {{ unit }}.</p>
-  {% endfor %}
+  <div class="data-list">
+      {% for measurement, value, unit in values %}
+        <div class="data-card">
+          <h3>{{ measurement }}</h3>
+          <p>{{ value }} {{ unit }}</p>
+        </div>
+      {% endfor %}
+    </div>
 
 {% endblock %}
