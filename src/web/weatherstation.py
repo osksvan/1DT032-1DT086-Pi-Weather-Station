@@ -19,10 +19,9 @@ import random
 import os
 import json
 
-# Path to the JSON log file containing sensor data. Adjust if needed for deployment.
+# Path to the JSON log file containing sensor data. Adjust if needed.
 # LOG_FILE = "/tmp/weatherdata.json"
 LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sensor_data.json")
-# print("Using log file: {}".format(LOG_FILE))
 
 # Configuration for data entries: (display_title, unit, json_key)
 # This list defines all sensor data points to extract and plot.
@@ -56,10 +55,8 @@ last_num_days = 30
 @app.route('/live_data')
 
 def live_data():
-    # The first page you see is just the live data
-    # In the template (live_data.html) this is set to auto refresh every five-seconds
     """
-    Route for the live data page (also the Homepage).
+    Route for the live data page (Homepage).
     Extracts the most recent value for each sensor and passes it to the live_data.html template.
     The template is configured to auto-refresh every five-seconds for real-time updates.
     
