@@ -13,7 +13,9 @@ import random
 import os
 import json
 
-LOG_FILE = "/tmp/weatherdata.json"
+# LOG_FILE = "/tmp/weatherdata.json"
+LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sensor_data.json")
+print("Using log file: {}".format(LOG_FILE))
 
 DATA_ENTRIES = [("Temperature", "celsius", "temperature_celsius"),
                 ("Humidity", "percent", "humidity_percent"),
