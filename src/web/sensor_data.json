@@ -1,0 +1,988 @@
+[
+  {
+    "timestamp": "2025-09-16T21:05:12.454129",
+    "environmental": {
+      "temperature_celsius": 35.07,
+      "pressure_millibars": 993.18,
+      "humidity_percent": 41.73
+    },
+    "orientation": {
+      "yaw_degrees": 236.3,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -8.3,
+      "y_microtesla": 12.44,
+      "z_microtesla": -18.59,
+      "compass_heading_degrees": 236.29
+    },
+    "accelerometer": {
+      "x_g": 0.0124,
+      "y_g": 0.0294,
+      "z_g": 0.996
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0,
+      "y_rad_per_sec": 0.0009,
+      "z_rad_per_sec": -0.0012
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:14.565465",
+    "environmental": {
+      "temperature_celsius": 35.09,
+      "pressure_millibars": 993.21,
+      "humidity_percent": 41.06
+    },
+    "orientation": {
+      "yaw_degrees": 235.9,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -16.87,
+      "y_microtesla": 24.3,
+      "z_microtesla": -38.99,
+      "compass_heading_degrees": 235.87
+    },
+    "accelerometer": {
+      "x_g": 0.0133,
+      "y_g": 0.0291,
+      "z_g": 0.9957
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0021,
+      "y_rad_per_sec": 0.0007,
+      "z_rad_per_sec": -0.0011
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:16.654162",
+    "environmental": {
+      "temperature_celsius": 35.24,
+      "pressure_millibars": 993.19,
+      "humidity_percent": 40.93
+    },
+    "orientation": {
+      "yaw_degrees": 235.55,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -16.9,
+      "y_microtesla": 24.59,
+      "z_microtesla": -38.55,
+      "compass_heading_degrees": 235.55
+    },
+    "accelerometer": {
+      "x_g": 0.0133,
+      "y_g": 0.0277,
+      "z_g": 0.9987
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0004,
+      "y_rad_per_sec": -0.0008,
+      "z_rad_per_sec": -0.0026
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:18.758033",
+    "environmental": {
+      "temperature_celsius": 35.2,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 41.12
+    },
+    "orientation": {
+      "yaw_degrees": 235.58,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -16.8,
+      "y_microtesla": 24.64,
+      "z_microtesla": -38.93,
+      "compass_heading_degrees": 235.59
+    },
+    "accelerometer": {
+      "x_g": 0.0131,
+      "y_g": 0.0328,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0138,
+      "y_rad_per_sec": -0.0033,
+      "z_rad_per_sec": -0.0005
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:20.864150",
+    "environmental": {
+      "temperature_celsius": 35.14,
+      "pressure_millibars": 993.16,
+      "humidity_percent": 41.64
+    },
+    "orientation": {
+      "yaw_degrees": 235.65,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -17.12,
+      "y_microtesla": 24.89,
+      "z_microtesla": -38.49,
+      "compass_heading_degrees": 235.64
+    },
+    "accelerometer": {
+      "x_g": 0.0148,
+      "y_g": 0.0274,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0048,
+      "y_rad_per_sec": -0.0012,
+      "z_rad_per_sec": -0.0001
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:22.998744",
+    "environmental": {
+      "temperature_celsius": 35.11,
+      "pressure_millibars": 993.21,
+      "humidity_percent": 41.19
+    },
+    "orientation": {
+      "yaw_degrees": 235.66,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -16.74,
+      "y_microtesla": 25.14,
+      "z_microtesla": -38.53,
+      "compass_heading_degrees": 235.69
+    },
+    "accelerometer": {
+      "x_g": 0.0145,
+      "y_g": 0.025,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0226,
+      "y_rad_per_sec": 0.0022,
+      "z_rad_per_sec": -0.0063
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:25.097553",
+    "environmental": {
+      "temperature_celsius": 35.24,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 40.89
+    },
+    "orientation": {
+      "yaw_degrees": 234.11,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -29.29,
+      "y_microtesla": 27.28,
+      "z_microtesla": -37.59,
+      "compass_heading_degrees": 233.67
+    },
+    "accelerometer": {
+      "x_g": 0.0056,
+      "y_g": 0.0393,
+      "z_g": 0.9945
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0023,
+      "y_rad_per_sec": 0.0003,
+      "z_rad_per_sec": 0.0017
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:27.192527",
+    "environmental": {
+      "temperature_celsius": 35.2,
+      "pressure_millibars": 993.16,
+      "humidity_percent": 40.87
+    },
+    "orientation": {
+      "yaw_degrees": 229.58,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -31.17,
+      "y_microtesla": 27.45,
+      "z_microtesla": -38.35,
+      "compass_heading_degrees": 229.25
+    },
+    "accelerometer": {
+      "x_g": 0.0162,
+      "y_g": 0.0303,
+      "z_g": 0.9979
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0018,
+      "y_rad_per_sec": 0.0002,
+      "z_rad_per_sec": 0.0012
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:29.321485",
+    "environmental": {
+      "temperature_celsius": 35.05,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 43.93
+    },
+    "orientation": {
+      "yaw_degrees": 226.58,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -30.55,
+      "y_microtesla": 27.54,
+      "z_microtesla": -38.58,
+      "compass_heading_degrees": 226.4
+    },
+    "accelerometer": {
+      "x_g": 0.0192,
+      "y_g": 0.0291,
+      "z_g": 0.9972
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0029,
+      "y_rad_per_sec": 0.0003,
+      "z_rad_per_sec": 0.0001
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:31.450881",
+    "environmental": {
+      "temperature_celsius": 35.12,
+      "pressure_millibars": 993.16,
+      "humidity_percent": 41.11
+    },
+    "orientation": {
+      "yaw_degrees": 224.88,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -31.08,
+      "y_microtesla": 27.86,
+      "z_microtesla": -38.17,
+      "compass_heading_degrees": 224.76
+    },
+    "accelerometer": {
+      "x_g": 0.0192,
+      "y_g": 0.0289,
+      "z_g": 0.9957
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0004,
+      "y_rad_per_sec": -0.0001,
+      "z_rad_per_sec": 0.0027
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:33.532609",
+    "environmental": {
+      "temperature_celsius": 35.14,
+      "pressure_millibars": 993.16,
+      "humidity_percent": 40.46
+    },
+    "orientation": {
+      "yaw_degrees": 223.72,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -31.0,
+      "y_microtesla": 27.43,
+      "z_microtesla": -38.42,
+      "compass_heading_degrees": 223.63
+    },
+    "accelerometer": {
+      "x_g": 0.0196,
+      "y_g": 0.0272,
+      "z_g": 0.9996
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0004,
+      "y_rad_per_sec": -0.0,
+      "z_rad_per_sec": -0.0007
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:35.636632",
+    "environmental": {
+      "temperature_celsius": 35.14,
+      "pressure_millibars": 993.16,
+      "humidity_percent": 40.87
+    },
+    "orientation": {
+      "yaw_degrees": 222.78,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -32.24,
+      "y_microtesla": 26.5,
+      "z_microtesla": -37.69,
+      "compass_heading_degrees": 222.65
+    },
+    "accelerometer": {
+      "x_g": 0.0063,
+      "y_g": 0.0204,
+      "z_g": 1.053
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0032,
+      "y_rad_per_sec": 0.0043,
+      "z_rad_per_sec": -0.003
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:37.734351",
+    "environmental": {
+      "temperature_celsius": 35.22,
+      "pressure_millibars": 993.18,
+      "humidity_percent": 41.17
+    },
+    "orientation": {
+      "yaw_degrees": 221.8,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -31.65,
+      "y_microtesla": 27.05,
+      "z_microtesla": -37.3,
+      "compass_heading_degrees": 221.75
+    },
+    "accelerometer": {
+      "x_g": 0.0194,
+      "y_g": 0.0299,
+      "z_g": 0.9943
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0018,
+      "y_rad_per_sec": -0.003,
+      "z_rad_per_sec": -0.0003
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:39.813199",
+    "environmental": {
+      "temperature_celsius": 35.24,
+      "pressure_millibars": 993.16,
+      "humidity_percent": 41.74
+    },
+    "orientation": {
+      "yaw_degrees": 221.29,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -33.23,
+      "y_microtesla": 28.22,
+      "z_microtesla": -29.74,
+      "compass_heading_degrees": 221.25
+    },
+    "accelerometer": {
+      "x_g": 0.0192,
+      "y_g": -0.228,
+      "z_g": 0.9616
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0,
+      "y_rad_per_sec": 0.0007,
+      "z_rad_per_sec": 0.0004
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:41.913150",
+    "environmental": {
+      "temperature_celsius": 35.14,
+      "pressure_millibars": 993.15,
+      "humidity_percent": 41.77
+    },
+    "orientation": {
+      "yaw_degrees": 220.85,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -33.54,
+      "y_microtesla": 28.17,
+      "z_microtesla": -28.64,
+      "compass_heading_degrees": 220.82
+    },
+    "accelerometer": {
+      "x_g": 0.009,
+      "y_g": -0.2825,
+      "z_g": 0.9217
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0,
+      "y_rad_per_sec": 0.0007,
+      "z_rad_per_sec": 0.0004
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:44.089185",
+    "environmental": {
+      "temperature_celsius": 35.01,
+      "pressure_millibars": 993.19,
+      "humidity_percent": 39.84
+    },
+    "orientation": {
+      "yaw_degrees": 214.57,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.76,
+      "y_microtesla": 6.93,
+      "z_microtesla": -48.86,
+      "compass_heading_degrees": 213.55
+    },
+    "accelerometer": {
+      "x_g": 0.0165,
+      "y_g": 0.0284,
+      "z_g": 0.9943
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0002,
+      "y_rad_per_sec": -0.0016,
+      "z_rad_per_sec": -0.0017
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:46.251275",
+    "environmental": {
+      "temperature_celsius": 35.11,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 40.67
+    },
+    "orientation": {
+      "yaw_degrees": 205.1,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.81,
+      "y_microtesla": 6.02,
+      "z_microtesla": -48.9,
+      "compass_heading_degrees": 204.42
+    },
+    "accelerometer": {
+      "x_g": 0.0199,
+      "y_g": 0.0291,
+      "z_g": 0.9984
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0027,
+      "y_rad_per_sec": -0.0022,
+      "z_rad_per_sec": 0.0004
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:48.415629",
+    "environmental": {
+      "temperature_celsius": 35.22,
+      "pressure_millibars": 993.19,
+      "humidity_percent": 41.28
+    },
+    "orientation": {
+      "yaw_degrees": 198.88,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.85,
+      "y_microtesla": 6.07,
+      "z_microtesla": -48.61,
+      "compass_heading_degrees": 198.45
+    },
+    "accelerometer": {
+      "x_g": 0.0184,
+      "y_g": 0.0303,
+      "z_g": 0.9948
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0031,
+      "y_rad_per_sec": 0.0017,
+      "z_rad_per_sec": -0.0012
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:50.557620",
+    "environmental": {
+      "temperature_celsius": 35.26,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 41.21
+    },
+    "orientation": {
+      "yaw_degrees": 194.87,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -44.11,
+      "y_microtesla": 6.1,
+      "z_microtesla": -49.08,
+      "compass_heading_degrees": 194.59
+    },
+    "accelerometer": {
+      "x_g": 0.0213,
+      "y_g": 0.026,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0013,
+      "y_rad_per_sec": -0.0007,
+      "z_rad_per_sec": 0.0009
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:52.661838",
+    "environmental": {
+      "temperature_celsius": 35.24,
+      "pressure_millibars": 993.15,
+      "humidity_percent": 40.94
+    },
+    "orientation": {
+      "yaw_degrees": 192.36,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.95,
+      "y_microtesla": 5.86,
+      "z_microtesla": -48.63,
+      "compass_heading_degrees": 192.17
+    },
+    "accelerometer": {
+      "x_g": 0.0204,
+      "y_g": 0.0284,
+      "z_g": 1.0594
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0008,
+      "y_rad_per_sec": -0.0029,
+      "z_rad_per_sec": -0.0003
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:54.760284",
+    "environmental": {
+      "temperature_celsius": 35.09,
+      "pressure_millibars": 993.19,
+      "humidity_percent": 40.68
+    },
+    "orientation": {
+      "yaw_degrees": 190.9,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.95,
+      "y_microtesla": 5.86,
+      "z_microtesla": -48.63,
+      "compass_heading_degrees": 190.83
+    },
+    "accelerometer": {
+      "x_g": 0.0192,
+      "y_g": 0.0289,
+      "z_g": 0.9989
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0022,
+      "y_rad_per_sec": -0.0018,
+      "z_rad_per_sec": 0.0003
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:56.870433",
+    "environmental": {
+      "temperature_celsius": 35.26,
+      "pressure_millibars": 993.18,
+      "humidity_percent": 40.66
+    },
+    "orientation": {
+      "yaw_degrees": 190.07,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -42.36,
+      "y_microtesla": 6.51,
+      "z_microtesla": -49.24,
+      "compass_heading_degrees": 190.01
+    },
+    "accelerometer": {
+      "x_g": 0.0204,
+      "y_g": 0.0286,
+      "z_g": 0.9987
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0016,
+      "y_rad_per_sec": -0.0006,
+      "z_rad_per_sec": 0.0013
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:05:59.020668",
+    "environmental": {
+      "temperature_celsius": 35.14,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 41.29
+    },
+    "orientation": {
+      "yaw_degrees": 189.22,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -22.02,
+      "y_microtesla": 3.29,
+      "z_microtesla": -62.75,
+      "compass_heading_degrees": 189.19
+    },
+    "accelerometer": {
+      "x_g": 0.0201,
+      "y_g": 0.0294,
+      "z_g": 0.9982
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0009,
+      "y_rad_per_sec": -0.0013,
+      "z_rad_per_sec": -0.0017
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:01.200870",
+    "environmental": {
+      "temperature_celsius": 35.26,
+      "pressure_millibars": 993.15,
+      "humidity_percent": 40.7
+    },
+    "orientation": {
+      "yaw_degrees": 190.36,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -23.6,
+      "y_microtesla": 6.08,
+      "z_microtesla": -63.79,
+      "compass_heading_degrees": 190.6
+    },
+    "accelerometer": {
+      "x_g": 0.0196,
+      "y_g": 0.0301,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0014,
+      "y_rad_per_sec": -0.0012,
+      "z_rad_per_sec": -0.0007
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:03.382529",
+    "environmental": {
+      "temperature_celsius": 35.11,
+      "pressure_millibars": 993.15,
+      "humidity_percent": 41.02
+    },
+    "orientation": {
+      "yaw_degrees": 192.05,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -26.27,
+      "y_microtesla": 7.17,
+      "z_microtesla": -62.53,
+      "compass_heading_degrees": 192.17
+    },
+    "accelerometer": {
+      "x_g": 0.0194,
+      "y_g": 0.0286,
+      "z_g": 0.9987
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0007,
+      "y_rad_per_sec": -0.0016,
+      "z_rad_per_sec": 0.0009
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:05.534523",
+    "environmental": {
+      "temperature_celsius": 35.16,
+      "pressure_millibars": 993.19,
+      "humidity_percent": 40.56
+    },
+    "orientation": {
+      "yaw_degrees": 192.1,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -40.36,
+      "y_microtesla": 5.68,
+      "z_microtesla": -52.49,
+      "compass_heading_degrees": 191.93
+    },
+    "accelerometer": {
+      "x_g": 0.0206,
+      "y_g": 0.0274,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0012,
+      "y_rad_per_sec": 0.0008,
+      "z_rad_per_sec": -0.0001
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:07.627713",
+    "environmental": {
+      "temperature_celsius": 35.07,
+      "pressure_millibars": 993.18,
+      "humidity_percent": 40.7
+    },
+    "orientation": {
+      "yaw_degrees": 190.34,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -42.04,
+      "y_microtesla": 3.98,
+      "z_microtesla": -49.55,
+      "compass_heading_degrees": 190.02
+    },
+    "accelerometer": {
+      "x_g": 0.0192,
+      "y_g": 0.0284,
+      "z_g": 0.9992
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.002,
+      "y_rad_per_sec": 0.0006,
+      "z_rad_per_sec": -0.0013
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:09.730041",
+    "environmental": {
+      "temperature_celsius": 35.22,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 40.55
+    },
+    "orientation": {
+      "yaw_degrees": 189.07,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -37.61,
+      "y_microtesla": 3.76,
+      "z_microtesla": -56.98,
+      "compass_heading_degrees": 188.93
+    },
+    "accelerometer": {
+      "x_g": 0.0201,
+      "y_g": 0.0282,
+      "z_g": 0.9979
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0017,
+      "y_rad_per_sec": 0.0001,
+      "z_rad_per_sec": 0.0009
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:11.841914",
+    "environmental": {
+      "temperature_celsius": 35.14,
+      "pressure_millibars": 993.18,
+      "humidity_percent": 40.26
+    },
+    "orientation": {
+      "yaw_degrees": 188.41,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.69,
+      "y_microtesla": 7.02,
+      "z_microtesla": -52.16,
+      "compass_heading_degrees": 188.45
+    },
+    "accelerometer": {
+      "x_g": 0.0199,
+      "y_g": 0.0282,
+      "z_g": 0.9979
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0005,
+      "y_rad_per_sec": -0.0014,
+      "z_rad_per_sec": -0.0009
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:13.960153",
+    "environmental": {
+      "temperature_celsius": 35.18,
+      "pressure_millibars": 993.15,
+      "humidity_percent": 38.62
+    },
+    "orientation": {
+      "yaw_degrees": 188.75,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.53,
+      "y_microtesla": 6.87,
+      "z_microtesla": -51.3,
+      "compass_heading_degrees": 188.76
+    },
+    "accelerometer": {
+      "x_g": 0.0201,
+      "y_g": 0.0289,
+      "z_g": 0.9989
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0003,
+      "y_rad_per_sec": -0.0019,
+      "z_rad_per_sec": 0.0012
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:16.152143",
+    "environmental": {
+      "temperature_celsius": 35.16,
+      "pressure_millibars": 993.17,
+      "humidity_percent": 40.51
+    },
+    "orientation": {
+      "yaw_degrees": 188.83,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.53,
+      "y_microtesla": 6.62,
+      "z_microtesla": -51.2,
+      "compass_heading_degrees": 188.82
+    },
+    "accelerometer": {
+      "x_g": 0.0213,
+      "y_g": 0.0284,
+      "z_g": 1.0603
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0009,
+      "y_rad_per_sec": 0.0012,
+      "z_rad_per_sec": -0.0015
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:18.242920",
+    "environmental": {
+      "temperature_celsius": 35.16,
+      "pressure_millibars": 993.18,
+      "humidity_percent": 40.41
+    },
+    "orientation": {
+      "yaw_degrees": 188.8,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.01,
+      "y_microtesla": 6.59,
+      "z_microtesla": -51.47,
+      "compass_heading_degrees": 188.79
+    },
+    "accelerometer": {
+      "x_g": 0.0187,
+      "y_g": 0.0277,
+      "z_g": 0.9977
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0012,
+      "y_rad_per_sec": -0.0015,
+      "z_rad_per_sec": 0.0017
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:20.346095",
+    "environmental": {
+      "temperature_celsius": 35.12,
+      "pressure_millibars": 993.19,
+      "humidity_percent": 40.28
+    },
+    "orientation": {
+      "yaw_degrees": 188.85,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.47,
+      "y_microtesla": 7.07,
+      "z_microtesla": -50.67,
+      "compass_heading_degrees": 188.87
+    },
+    "accelerometer": {
+      "x_g": 0.0201,
+      "y_g": 0.0284,
+      "z_g": 0.936
+    },
+    "gyroscope": {
+      "x_rad_per_sec": -0.0002,
+      "y_rad_per_sec": -0.0001,
+      "z_rad_per_sec": -0.0016
+    }
+  },
+  {
+    "timestamp": "2025-09-16T21:06:22.455701",
+    "environmental": {
+      "temperature_celsius": 35.28,
+      "pressure_millibars": 993.15,
+      "humidity_percent": 40.62
+    },
+    "orientation": {
+      "yaw_degrees": 188.99,
+      "pitch_degrees": 0.0,
+      "roll_degrees": 0.0
+    },
+    "magnetometer": {
+      "x_microtesla": -43.57,
+      "y_microtesla": 6.78,
+      "z_microtesla": -50.44,
+      "compass_heading_degrees": 188.98
+    },
+    "accelerometer": {
+      "x_g": 0.0209,
+      "y_g": 0.0282,
+      "z_g": 0.9984
+    },
+    "gyroscope": {
+      "x_rad_per_sec": 0.0008,
+      "y_rad_per_sec": 0.0014,
+      "z_rad_per_sec": -0.0013
+    }
+  }
+]

@@ -1,78 +1,57 @@
 <!doctype html>
+<html lang="en">
 <head>
+  <!-- allows child templates to override/extend the head section -->
   {% block head %}
-  <title>{% block title %}{% endblock %}</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- enables child templates to set a custom page title. -->
+  <title>{% block title %}Weather Station{% endblock %}</title>
+
+  <!-- Google Fonts for Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link custom stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
   {% endblock %}
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    h2, p {
-      margin: 10px;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333333;
-    }
-
-    ul li {
-      float: left;
-    }
-
-    ul li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    ul li a:hover {
-      background-color: #111111;
-    }
-    ul li.active {
-        background-color: green;
-    }
-  </style>
 </head>
-<script type="text/javascript">
 
-updateLinks();
+<body>
+  <header>
+    <h1 class="app-title">🌦 Raspberry Pi Weather Station</h1>
 
-function updateLinks () {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', _updateLinks);
-    } else {
-        _updateLinks();
-    }
+    <nav>
+      <!-- Navigation Menu: provides links to application sections. -->
+      <ul class="navbar">
+        <li class="menu"><a href="/live_data">Live data</a></li>
+        <li class="menu"><a href="/historical_data">Historical data</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    function _updateLinks() {
-        var menuLinks = document.querySelectorAll('li.menu');
-
-        menuLinks.forEach(function (link) {
-            if (window.location.pathname === new URL(link.querySelector('a').
-                                                          getAttribute('href'), 
-                                                          window.location.origin).pathname)
-                link.classList.add('active');
-        });
-    }
-};
-</script>
-{% block content %}
-<ul>
-  <li class="menu"><a href="/live_data">Live data</a></li>
-  <li class="menu"><a href="/historical_data">Historical data</a></li>
-</ul>
-{% endblock %}
-<footer>
-    {% block footer %}
-    <p style="color:red;">Caution: Data values may be inaccurate.</p>
-    <p>Created for a project in course 1DT032/1DT086 at Uppsala University</p>
+  <!-- Primary content area: where child templates insert their main page content. -->
+  <main>
+    {% block content %}
     {% endblock %}
-</footer>
+
+  </main>
+
+  <footer>
+    {% block footer %}
+    
+    <!-- Warning notice -->
+    <p class="warning">⚠️ Caution: Data values may be inaccurate.</p>
+    
+    <!-- Attribution -->
+    <p>Created for a project in course <strong>1DT032 / 1DT086</strong> at <strong>Uppsala University</strong>.</p>
+
+    {% endblock %}
+  </footer>
+
+  <!-- link to JavaScript file -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
