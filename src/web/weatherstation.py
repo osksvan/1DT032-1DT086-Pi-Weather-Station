@@ -171,11 +171,6 @@ if __name__ == "__main__":
     Loads the data and prints the latest values for each sensor to the console.
     Useful for quick testing without starting the Flask server.
     """
-    """
-    Entry point when running the script directly (e.g., python weatherstation.py).
-    Loads the data and prints the latest values for each sensor to the console.
-    Useful for quick testing without starting the Flask server.
-    """
     # Load data for printing
     dataset = get_json()
     if dataset:
