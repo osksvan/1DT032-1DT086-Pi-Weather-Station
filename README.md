@@ -16,6 +16,9 @@ Since they contain special keyword `%h`, they need to be placed in the user's sy
     cd    # Leave blank, this is for $HOME
     git clone https://github.com/osksvan/1DT032-1DT086-Pi-Weather-Station.git
     cd 1DT032-1DT086-Pi-Weather-Station/systemd
-    mkdir -p ~/.config/systemd/user/ && cp webapp.service "$_"
+    mkdir -p ~/.config/systemd/user/ && cp *.service "$_"
     systemctl --user enable webapp.service
     systemctl --user start webapp.service
+    systemctl --user enable backend.service
+    systemctl --user start backend.service
+

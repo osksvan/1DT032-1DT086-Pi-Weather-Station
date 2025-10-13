@@ -1,0 +1,13 @@
+[Unit]
+Description=Pi Weather Station Backend
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/1DT032-1DT086-Pi-Weather-Station/src/web/weatherstation_backend.py
+
+Restart=on-failure 
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
