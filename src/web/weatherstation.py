@@ -186,7 +186,7 @@ def get_json(max_retries=30, sleep_seconds=0.1):
 
         except (json.JSONDecodeError, OSError) as e:
             # Likely half-written file or transient IO error; retry
-            # print(f"[get_json] transient read error: {e}")
+            print(f"[get_json] transient read error: {e}")
             pass
 
         attempts += 1
