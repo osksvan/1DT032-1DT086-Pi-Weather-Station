@@ -98,16 +98,21 @@ def historical_data():
     scripts = []
     divs = []
 
+    # Get all timestamps then out only last n days worth of data
     timestamps = [datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%S.%f') for timestamp in extract("timestamp")]
+    timestamps = [ts for ts in timestamps if ts >= datetime.now() - timedelta(days=last_num_days)]
+
     for (title, unit, data_point) in DATA_ENTRIES:
-        temperatures = extract(data_point)
+        values = extract(data_point)
 
-        p = figure(title=title, x_axis_label='Date', y_axis_label=unit, x_axis_type="datetime")
-        p.line(timestamps[-last_num_days:], temperatures[-last_num_days:], line_width=2)
-        script, div = components(p)
+        if len(timestamps):
 
-        scripts.append(script)
-        divs.append(div)
+            p = figure(title=title, x_axis_label='Date', y_axis_label=unit, x_axis_type="datetime")
+            p.line(timestamps, values[-len(timestamps):], line_width=2)
+            script, div = components(p)
+
+            scripts.append(script)
+            divs.append(div)
 
     return render_template("historical_data.html",
         plot_scripts=scripts,
