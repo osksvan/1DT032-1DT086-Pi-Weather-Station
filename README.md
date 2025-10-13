@@ -21,4 +21,5 @@ Since they contain special keyword `%h`, they need to be placed in the user's sy
     systemctl --user start webapp.service
     systemctl --user enable backend.service
     systemctl --user start backend.service
+    sudo loginctl enable-linger $USER   # Let user services live after disconnecting
 
