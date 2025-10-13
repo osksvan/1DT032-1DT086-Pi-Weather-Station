@@ -1,0 +1,14 @@
+[Unit]
+Description=Pi Weather Station Web App
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/1DT032-1DT086-Pi-Weather-Station/src/web/
+ExecStart=flask --app weatherstation run --host=0.0.0.0
+
+Restart=on-failure 
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
