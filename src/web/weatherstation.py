@@ -32,19 +32,19 @@ DATA_ENTRIES = [
     ("Temperature", "celsius", "temperature_celsius"),
     ("Humidity", "percent", "humidity_percent"),
     ("Pressure", "mbar", "pressure_millibars"),
-    ("Yaw", "degrees", "yaw_degrees"),
-    ("Pitch", "degrees", "pitch_degrees"),
-    ("Roll", "degrees", "roll_degrees"),
-    ("Magnetometer X", "μT", "x_microtesla"),
-    ("Magnetometer Y", "μT", "y_microtesla"),
-    ("Magnetometer Z", "μT", "z_microtesla"),
-    ("Heading", "degrees", "compass_heading_degrees"),
-    ("Acceleration X", "g", "x_g"),
-    ("Acceleration Y", "g", "y_g"),
-    ("Acceleration Z", "g", "z_g"),
-    ("Gyro X", "rad/s", "x_rad_per_sec"),
-    ("Gyro Y", "rad/s", "y_rad_per_sec"),
-    ("Gyro Z", "rad/s", "z_rad_per_sec")
+    #("Yaw", "degrees", "yaw_degrees"),
+    #("Pitch", "degrees", "pitch_degrees"),
+    #("Roll", "degrees", "roll_degrees"),
+    #("Magnetometer X", "μT", "x_microtesla"),
+    #("Magnetometer Y", "μT", "y_microtesla"),
+    #("Magnetometer Z", "μT", "z_microtesla"),
+    #("Heading", "degrees", "compass_heading_degrees"),
+    #("Acceleration X", "g", "x_g"),
+    #("Acceleration Y", "g", "y_g"),
+    #("Acceleration Z", "g", "z_g"),
+    #("Gyro X", "rad/s", "x_rad_per_sec"),
+    #("Gyro Y", "rad/s", "y_rad_per_sec"),
+    #("Gyro Z", "rad/s", "z_rad_per_sec")
 ]
 
 # Flask application instance
