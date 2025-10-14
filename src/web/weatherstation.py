@@ -18,6 +18,7 @@ from datetime import datetime, timedelta
 import random
 import os
 import json
+import time
 
 # Path to the JSON log file containing sensor data. Adjust if needed.
 # LOG_FILE = "/tmp/weatherdata.json"
@@ -65,7 +66,10 @@ def live_data():
     """
     values = []
     for (title, unit, data_point) in DATA_ENTRIES:
-        values.append((title, extract(data_point)[-1], unit))
+        # Prevents a 500 error if get_json() returns [] or a key has no data.
+        series = extract(data_point)
+        latest = series[-1] if series else None  
+        values.append((title, latest, unit))
 
     return render_template("live_data.html", values=values)
 
@@ -150,25 +154,52 @@ def extract(key):
                     extracted.append(value[key])
     return extracted    
 
-def get_json():
+def get_json(max_retries=30, sleep_seconds=0.1):
     """
-    Loads the weather data from the JSON log file.
-    
+    Loads the weather data from the JSON log file, robustly.
+
+    Behavior:
+        - If file is missing or empty: return [].
+        - If JSON is temporarily invalid/half-written: retry in a loop
+          until it becomes valid or we reach max_retries, then return [].
+        - Always returns a list (parsed dataset) or [].
+
+    Args:
+        max_retries (int): maximum retry attempts before giving up.
+        sleep_seconds (float): sleep interval between retries.
+
     Returns:
-        list: The parsed JSON data (list of dicts, each representing a timestamped entry).
-              Empty list if file doesn't exist, is empty, or fails to load.
-    
-    Raises:
-        Prints error message to console on failure (no exception raised for robustness).
+        list: The parsed JSON data (list of dicts), or [] on failure.
     """
-    try:
-        if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0:
-            with open(LOG_FILE, 'r') as file:
-                dataset = json.load(file)
-                return dataset
-    except (json.JSONDecodeError, IOError) as e:
-        print(f"Failed to read data from {LOG_FILE}: {e}")
-    return []
+    attempts = 0
+    while True:
+        try:
+            if not os.path.exists(LOG_FILE) or os.path.getsize(LOG_FILE) == 0:
+                return []
+
+            # Read full text first, then parse (avoids some edge cases)
+            with open(LOG_FILE, "r") as f:
+                text = f.read()
+
+            data = json.loads(text)  # may raise JSONDecodeError
+
+            # Structure check: we expect a list of entries
+            if isinstance(data, list):
+                return data
+            else:
+                print(f"[get_json] Invalid structure (expected list, got {type(data).__name__}); retrying...")
+
+        except (json.JSONDecodeError, OSError) as e:
+            # Likely half-written file or transient IO error; retry
+            print(f"[get_json] transient read error: {e}")
+            pass
+
+        attempts += 1
+        if attempts >= max_retries:
+            print(f"[get_json] Giving up after {attempts} attempts; returning [].")
+            return []
+
+        time.sleep(sleep_seconds)
 
 if __name__ == "__main__":
     """
