@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=%h/1DT032-1DT086-Pi-Weather-Station/src/web/weatherstation_backend.py
+ExecStart=%h/1DT032-1DT086-Pi-Weather-Station/src/backend/weatherstation.py
 
 Restart=on-failure 
 RestartSec=5

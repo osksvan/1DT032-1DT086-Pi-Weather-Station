@@ -15,6 +15,7 @@ from bokeh.plotting import figure
 from bokeh.embed import components
 from bokeh.resources import INLINE
 from datetime import datetime, timedelta
+from pathlib import Path
 import random
 import os
 import json
@@ -22,7 +23,7 @@ import time
 
 # Path to the JSON log file containing sensor data. Adjust if needed.
 # LOG_FILE = "/tmp/weatherdata.json"
-LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sensor_data.json")
+LOG_FILE = os.path.join(Path(os.path.dirname(os.path.abspath(__file__))).parent.absolute(), "sensor_data.json")
 
 # Configuration for data entries: (display_title, unit, json_key)
 # This list defines all sensor data points to extract and plot.
