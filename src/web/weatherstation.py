@@ -91,7 +91,11 @@ def historical_data():
     global last_num_days
     if request.method == "POST":
         # Update the global num_days from form input (e.g., from a slider or input field)
-        last_num_days = int(request.form.get("last_num_days"))
+        user_input = request.form.get("last_num_days")
+        try:
+            last_num_days = min(max(int(user_input), 1), 100000)
+        except:
+            print(f"Failed to parse '{user_input}' as int.")
     
     # Draw graphs from historical data
     # Render Bokeh JavaScript and CSS resources inline for standalone embedding
